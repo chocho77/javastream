@@ -3,11 +3,21 @@ package main;
 import resource.Gender;
 import resource.Person;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainStream {
     public static void main(String[] args) {
         List<Person> people = getPeople();
+
+        // Imperative approach
+
+        List<Person> females = new ArrayList<>();
+
+
+
+        // Declarative approach
+        
 
     }
 
