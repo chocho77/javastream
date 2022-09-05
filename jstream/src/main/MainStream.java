@@ -5,13 +5,14 @@ import resource.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainStream {
     public static void main(String[] args) {
         List<Person> people = getPeople();
 
         // Imperative approach
-
+        /*
         List<Person> females = new ArrayList<>();
 
         for(Person person: people) {
@@ -21,11 +22,14 @@ public class MainStream {
         }
 
         females.forEach(System.out::println);
-
+        */
 
         // Declarative approach
 
         // Filter
+        List<Person> females = people.stream()
+                .filter(person -> person.getGender().equals(Gender.FEMALE))
+                .collect(Collectors.toList());
         // Sort
         // All match
         // Any match
