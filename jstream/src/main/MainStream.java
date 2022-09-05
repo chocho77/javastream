@@ -25,6 +25,15 @@ public class MainStream {
 
         // Declarative approach
 
+        // Filter
+        // Sort
+        // All match
+        // Any match
+        // None match
+        // Max
+        // Min
+        // Group
+
 
     }
 
