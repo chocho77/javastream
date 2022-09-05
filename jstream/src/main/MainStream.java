@@ -19,7 +19,8 @@ public class MainStream {
                 females.add(person);
             }
         }
-        
+
+        females.forEach(System.out::println);
 
 
         // Declarative approach
