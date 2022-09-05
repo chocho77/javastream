@@ -14,10 +14,16 @@ public class MainStream {
 
         List<Person> females = new ArrayList<>();
 
+        for(Person person: people) {
+            if(person.getGender().equals(Gender.FEMALE)) {
+                females.add(person);
+            }
+        }
+        
 
 
         // Declarative approach
-        
+
 
     }
 
