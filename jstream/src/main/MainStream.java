@@ -6,6 +6,7 @@ import resource.Person;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MainStream {
@@ -60,6 +61,8 @@ public class MainStream {
                 .min(Comparator.comparing(Person::getAge))
                 .ifPresent(System.out::println);
         // Group
+        Map<Gender, List<Person>> groupByGender = people.stream()
+                .collect(Collectors.groupingBy(Person::getGender));
 
 
     }
