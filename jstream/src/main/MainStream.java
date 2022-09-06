@@ -40,7 +40,7 @@ public class MainStream {
       //  sorted.forEach(System.out::println);
         // All match
         boolean allMatch = people.stream()
-                .allMatch(person -> person.getAge() > 5);
+                .allMatch(person -> person.getAge() > 8);
         System.out.println(allMatch);
         // Any match
         // None match
