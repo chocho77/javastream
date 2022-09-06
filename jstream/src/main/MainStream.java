@@ -64,6 +64,12 @@ public class MainStream {
         Map<Gender, List<Person>> groupByGender = people.stream()
                 .collect(Collectors.groupingBy(Person::getGender));
 
+        groupByGender.forEach((gender, people1) -> {
+            System.out.println(gender);
+            people1.forEach(System.out::println);
+            System.out.println();
+        });
+
 
     }
 
