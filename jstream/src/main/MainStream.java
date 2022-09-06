@@ -49,8 +49,11 @@ public class MainStream {
         // None match
         boolean noneMatch = people.stream()
                 .noneMatch(person -> person.getName().equals("Antonio"));
-        System.out.println(noneMatch);
+        // System.out.println(noneMatch);
         // Max
+        people.stream()
+                .max(Comparator.comparing(Person::getAge))
+                .ifPresent(System.out::println);
 
         // Min
 
