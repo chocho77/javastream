@@ -4,6 +4,7 @@ import resource.Gender;
 import resource.Person;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,7 +34,10 @@ public class MainStream {
        // females.forEach(System.out::println);
 
         // Sort
-        people.forEach(System.out::println);
+        List<Person> sorted = people.stream()
+                .sorted(Comparator.comparing(Person::getAge))
+                .collect(Collectors.toList());
+        sorted.forEach(System.out::println);
         // All match
         // Any match
         // None match
