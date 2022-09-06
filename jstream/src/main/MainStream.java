@@ -35,7 +35,7 @@ public class MainStream {
 
         // Sort
         List<Person> sorted = people.stream()
-                .sorted(Comparator.comparing(Person::getAge))
+                .sorted(Comparator.comparing(Person::getAge).reversed())
                 .collect(Collectors.toList());
         sorted.forEach(System.out::println);
         // All match
