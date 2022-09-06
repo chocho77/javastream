@@ -41,17 +41,19 @@ public class MainStream {
         // All match
         boolean allMatch = people.stream()
                 .allMatch(person -> person.getAge() > 8);
-        System.out.println(allMatch);
+        //System.out.println(allMatch);
         // Any match
         boolean anyMatch = people.stream()
                 .anyMatch(person -> person.getAge() > 8);
-        System.out.println(anyMatch);
+        //System.out.println(anyMatch);
         // None match
-
+        boolean noneMatch = people.stream()
+                .noneMatch(person -> person.getName().equals("Antonio"));
+        System.out.println(noneMatch);
         // Max
 
         // Min
-        
+
         // Group
 
 
