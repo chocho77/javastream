@@ -3,10 +3,7 @@ package main;
 import resource.Gender;
 import resource.Person;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MainStream {
@@ -64,11 +61,18 @@ public class MainStream {
         Map<Gender, List<Person>> groupByGender = people.stream()
                 .collect(Collectors.groupingBy(Person::getGender));
 
-        groupByGender.forEach((gender, people1) -> {
-            System.out.println(gender);
-            people1.forEach(System.out::println);
-            System.out.println();
-        });
+//        groupByGender.forEach((gender, people1) -> {
+//            System.out.println(gender);
+//            people1.forEach(System.out::println);
+//            System.out.println();
+//        });
+
+        Optional<String> oldestFemaleAge = people.stream()
+                .filter(person ->person.getGender().equals(Gender.FEMALE))
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getName);
+
+        oldestFemaleAge.ifPresent(System.out::println);
 
 
     }
