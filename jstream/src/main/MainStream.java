@@ -30,9 +30,10 @@ public class MainStream {
         List<Person> females = people.stream()
                 .filter(person -> person.getGender().equals(Gender.FEMALE))
                 .collect(Collectors.toList());
-        females.forEach(System.out::println);
+       // females.forEach(System.out::println);
 
         // Sort
+        people.forEach(System.out::println);
         // All match
         // Any match
         // None match
