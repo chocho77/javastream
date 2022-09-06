@@ -52,11 +52,13 @@ public class MainStream {
         // System.out.println(noneMatch);
         // Max
         people.stream()
-                .max(Comparator.comparing(Person::getAge))
-                .ifPresent(System.out::println);
+                .max(Comparator.comparing(Person::getAge));
+           //     .ifPresent(System.out::println);
 
         // Min
-
+        people.stream()
+                .min(Comparator.comparing(Person::getAge))
+                .ifPresent(System.out::println);
         // Group
 
 
