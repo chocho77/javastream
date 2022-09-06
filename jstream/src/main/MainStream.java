@@ -43,6 +43,9 @@ public class MainStream {
                 .allMatch(person -> person.getAge() > 8);
         System.out.println(allMatch);
         // Any match
+        boolean anyMatch = people.stream()
+                .anyMatch(person -> person.getAge() > 8);
+        System.out.println(anyMatch);
         // None match
         // Max
         // Min
