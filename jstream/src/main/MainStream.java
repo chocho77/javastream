@@ -47,8 +47,11 @@ public class MainStream {
                 .anyMatch(person -> person.getAge() > 8);
         System.out.println(anyMatch);
         // None match
+
         // Max
+
         // Min
+        
         // Group
 
 
